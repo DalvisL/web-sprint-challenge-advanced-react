@@ -34,9 +34,6 @@ export default class AppClass extends React.Component {
     const y = Math.floor(i / 3) + 1;
     return [x, y];
   }
-  getXYCoordinates = (index) => {
-    gwtXY(index).join(', ');
-  }
   getXYMessage = (x, y) => {
     // It it not necessary to have a state to track the "Coordinates (2, 2)" message for the user.
     // You can use the `getXY` helper above to obtain the coordinates, and then `getXYMessage`
@@ -93,7 +90,6 @@ export default class AppClass extends React.Component {
     this.setState({
       index: nextIndex,
       steps: this.state.steps + 1,
-      lastIndex: this.state.index,
       coordinates: (`(${x},${y})`),
       message: '',
     });
