@@ -85,6 +85,8 @@ export default function AppFunctional(props) {
     setSteps(steps + 1);
     setMessage('');
   }
+  // This useEffect will run every time the index changes.
+  // It will update the coordinates state.
   useEffect(() => {
     setCoordinates(`(${getXY(index).join(',')})`);
   }, [index]);
